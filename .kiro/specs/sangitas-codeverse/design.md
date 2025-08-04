@@ -222,9 +222,13 @@ const animationConfig = {
   galaxy: {
     mouseControls: true,
     touchControls: true,
-    color: 0x3f51b5,
+    color: 0x8b5cf6, // Updated to neon purple for cosmic theme consistency
     backgroundColor: 0x0a0a0a,
-    scale: 1.0
+    scale: 1.0,
+    points: 10.0,
+    maxDistance: 20.0,
+    spacing: 15.0,
+    showDots: true
   },
   typewriter: {
     speed: 50,

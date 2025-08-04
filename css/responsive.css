@@ -1,2 +1,269 @@
 /* Sangita's Codeverse - Responsive Styles */
-/* Media queries and responsive design will be implemented here */
+/* Media queries and responsive design */
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* Mobile: 320px - 768px (simplified animations) */
+/* Tablet: 768px - 1024px (moderate animations) */
+/* Desktop: 1024px+ (full animation suite) */
+
+/* ===== BASE MOBILE STYLES (320px+) ===== */
+@media (max-width: 767px) {
+  :root {
+    /* Adjust spacing for mobile */
+    --space-16: 2.5rem;
+    --space-20: 3rem;
+    --space-24: 4rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-3);
+  }
+  
+  .section {
+    padding: var(--space-16) 0;
+  }
+  
+  .section-title {
+    margin-bottom: var(--space-12);
+  }
+  
+  /* Grid adjustments for mobile */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Typography adjustments */
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-3xl); }
+  h3 { font-size: var(--text-2xl); }
+  
+  /* Touch-friendly interactive elements */
+  button,
+  .btn-primary,
+  .planet-link,
+  .filter-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ===== TABLET STYLES (768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+  
+  /* Grid adjustments for tablet */
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Moderate animations for tablet */
+  .planet-link {
+    transition: transform var(--transition-base);
+  }
+  
+  .planet-link:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* ===== DESKTOP STYLES (1024px+) ===== */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-8);
+  }
+  
+  /* Full grid layouts for desktop */
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Enhanced hover effects for desktop */
+  .planet-link {
+    transition: all var(--transition-cosmic);
+  }
+  
+  .planet-link:hover {
+    transform: scale(1.1) translateY(-5px);
+  }
+}
+
+/* ===== LARGE DESKTOP STYLES (1280px+) ===== */
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+  
+  .section {
+    padding: var(--space-24) 0;
+  }
+}
+
+/* ===== EXTRA LARGE DESKTOP STYLES (1536px+) ===== */
+@media (min-width: 1536px) {
+  .container {
+    max-width: var(--container-2xl);
+  }
+}
+
+/* ===== LANDSCAPE MOBILE STYLES ===== */
+@media (max-width: 767px) and (orientation: landscape) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+  
+  /* Adjust hero section for landscape mobile */
+  .landing-section {
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    padding: var(--space-8) 0;
+  }
+}
+
+/* ===== HIGH DPI DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize for retina displays */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  .landing-section,
+  .galaxy-background,
+  .fallback-bg,
+  .easter-egg-container {
+    display: none !important;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+/* ===== ACCESSIBILITY RESPONSIVE ADJUSTMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable complex animations on mobile for performance */
+  @media (max-width: 767px) {
+    .planet-link,
+    .project-card,
+    .skill-star {
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+}
+
+/* ===== DARK MODE SUPPORT (Future Enhancement) ===== */
+@media (prefers-color-scheme: dark) {
+  /* Already optimized for dark theme, but can add overrides here if needed */
+}
+
+/* ===== CONTAINER QUERIES (Future Enhancement) ===== */
+/* When container queries are widely supported, add responsive components here */
+
+/* ===== RESPONSIVE UTILITIES ===== */
+/* Hide elements on specific screen sizes */
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+/* Show elements only on specific screen sizes */
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tablet-only {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* Default hide for responsive utilities */
+.mobile-only,
+.tablet-only,
+.desktop-only {
+  display: none;
+}
+
+/* ===== RESPONSIVE TEXT ALIGNMENT ===== */
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center;
+  }
+  
+  .text-left-mobile {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-center-tablet {
+    text-align: center;
+  }
+  
+  .text-left-tablet {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-center-desktop {
+    text-align: center;
+  }
+  
+  .text-left-desktop {
+    text-align: left;
+  }
+}
