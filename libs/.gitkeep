@@ -1,0 +1,6 @@
+# Keep this directory in git
+# External libraries will be placed here as CDN alternatives
+# - vanta.min.js
+# - three.min.js  
+# - gsap.min.js
+# - scrollreveal.min.js

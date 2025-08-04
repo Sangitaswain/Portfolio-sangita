@@ -1,0 +1,43 @@
+{
+  "name": "sangitas-codeverse",
+  "version": "1.0.0",
+  "description": "An immersive, interactive, and animated personal developer portfolio website with a galaxy-themed interface showcasing Sangita's coding skills and personality.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Static site - no build process needed'",
+    "deploy": "vercel --prod",
+    "lint": "echo 'Linting not configured yet'",
+    "test": "echo 'Tests not configured yet'"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "cosmic",
+    "interactive",
+    "3d",
+    "animation",
+    "data-engineering",
+    "machine-learning",
+    "web-development"
+  ],
+  "author": "Sangita",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sangita/sangitas-codeverse.git"
+  },
+  "homepage": "https://sangitas-codeverse.vercel.app",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
