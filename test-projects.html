@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Test - Sangita's Codeverse</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <main>
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading" class="section-title">Projects Showcase</h2>
+                
+                <!-- Project Filters -->
+                <div class="project-filters" role="tablist" aria-label="Project categories">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="projects-grid">
+                        All Projects
+                    </button>
+                    <button class="filter-btn" data-filter="frontend" role="tab" aria-selected="false" aria-controls="projects-grid">
+                        Frontend
+                    </button>
+                    <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false" aria-controls="projects-grid">
+                        Backend
+                    </button>
+                    <button class="filter-btn" data-filter="ml" role="tab" aria-selected="false" aria-controls="projects-grid">
+                        ML
+                    </button>
+                    <button class="filter-btn" data-filter="hackathon" role="tab" aria-selected="false" aria-controls="projects-grid">
+                        Hackathon
+                    </button>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div id="projects-grid" class="projects-grid" role="tabpanel">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Application Scripts -->
+    <script src="js/projects.js"></script>
+    <script>
+        // Initialize projects module when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.ProjectsModule) {
+                window.ProjectsModule.init();
+            }
+        });
+    </script>
+</body>
+</html>

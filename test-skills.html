@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Constellation Test - Sangita's Codeverse</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <main>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section" aria-labelledby="skills-heading">
+            <div class="container">
+                <h2 id="skills-heading" class="section-title">Skills Constellation</h2>
+                
+                <div class="skills-container">
+                    <svg id="skills-constellation" class="constellation-svg" viewBox="0 0 800 400" role="img" aria-labelledby="constellation-desc">
+                        <title id="constellation-desc">Interactive skills constellation showing technical abilities</title>
+                        <!-- Skills constellation will be dynamically generated here -->
+                    </svg>
+                    
+                    <div class="skills-legend" aria-label="Skills categories">
+                        <div class="legend-item" tabindex="0" role="button" aria-label="Filter by languages">
+                            <span class="legend-color languages" aria-hidden="true"></span>
+                            <span class="legend-text">Languages</span>
+                        </div>
+                        <div class="legend-item" tabindex="0" role="button" aria-label="Filter by frameworks">
+                            <span class="legend-color frameworks" aria-hidden="true"></span>
+                            <span class="legend-text">Frameworks</span>
+                        </div>
+                        <div class="legend-item" tabindex="0" role="button" aria-label="Filter by tools">
+                            <span class="legend-color tools" aria-hidden="true"></span>
+                            <span class="legend-text">Tools</span>
+                        </div>
+                        <div class="legend-item" tabindex="0" role="button" aria-label="Filter by soft skills">
+                            <span class="legend-color soft-skills" aria-hidden="true"></span>
+                            <span class="legend-text">Soft Skills</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Application Scripts -->
+    <script src="js/skills.js"></script>
+    <script>
+        // Initialize skills module when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.SkillsModule) {
+                window.SkillsModule.init();
+            }
+        });
+    </script>
+</body>
+</html>

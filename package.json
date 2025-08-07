@@ -1,14 +1,26 @@
 {
   "name": "sangitas-codeverse",
   "version": "1.0.0",
-  "description": "An immersive, interactive, and animated personal developer portfolio website with a galaxy-themed interface showcasing Sangita's coding skills and personality.",
+  "description": "Sangita's immersive cosmic developer portfolio showcasing full-stack development, data engineering, and machine learning projects with interactive 3D animations.",
   "main": "index.html",
   "scripts": {
-    "dev": "live-server --port=3000 --open=/index.html",
-    "build": "echo 'Static site - no build process needed'",
+    "dev": "live-server --port=3000 --host=localhost --open=/",
+    "build": "npm run optimize && npm run minify",
+    "optimize": "npm run optimize-images && npm run optimize-css && npm run optimize-js",
+    "optimize-images": "imagemin assets/images/**/*.{jpg,png,gif} --out-dir=assets/images/optimized",
+    "optimize-css": "cleancss -o css/main.min.css css/main.css css/components.css css/animations.css css/responsive.css",
+    "optimize-js": "terser js/*.js -o js/bundle.min.js --compress --mangle",
+    "minify": "html-minifier --input-dir . --output-dir dist --file-ext html --remove-comments --collapse-whitespace --minify-css --minify-js",
+    "test": "npm run test-accessibility && npm run test-performance",
+    "test-accessibility": "pa11y http://localhost:3000",
+    "test-performance": "lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse.json",
     "deploy": "vercel --prod",
-    "lint": "echo 'Linting not configured yet'",
-    "test": "echo 'Tests not configured yet'"
+    "deploy-preview": "vercel",
+    "start": "live-server --port=3000",
+    "lint": "eslint js/*.js",
+    "format": "prettier --write \"**/*.{js,css,html,md}\"",
+    "validate": "html-validate index.html",
+    "audit": "npm audit && npm run test-accessibility && npm run test-performance"
   },
   "keywords": [
     "portfolio",
@@ -16,28 +28,53 @@
     "cosmic",
     "interactive",
     "3d",
-    "animation",
+    "animations",
+    "full-stack",
     "data-engineering",
     "machine-learning",
-    "web-development"
+    "web-development",
+    "javascript",
+    "css",
+    "html",
+    "accessibility",
+    "performance"
   ],
-  "author": "Sangita",
+  "author": {
+    "name": "Sangita",
+    "email": "sangita@example.com",
+    "url": "https://sangitas-codeverse.vercel.app"
+  },
   "license": "MIT",
+  "homepage": "https://sangitas-codeverse.vercel.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/sangita/sangitas-codeverse.git"
   },
-  "homepage": "https://sangitas-codeverse.vercel.app",
-  "devDependencies": {
-    "live-server": "^1.2.2"
+  "bugs": {
+    "url": "https://github.com/sangita/sangitas-codeverse/issues"
   },
-  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.19.4",
+    "html-minifier": "^4.0.0",
+    "pa11y": "^6.2.3",
+    "lighthouse": "^10.4.0",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "html-validate": "^8.5.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
-  ],
-  "engines": {
-    "node": ">=14.0.0"
-  }
+    "not dead",
+    "not ie 11"
+  ]
 }

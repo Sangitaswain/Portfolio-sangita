@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sangitas-codeverse.vercel.app/sitemap.xml
+
+# Disallow sensitive files
+Disallow: /js/
+Disallow: /css/
+Disallow: /.git/
+Disallow: /.kiro/
+Disallow: /node_modules/
+Disallow: /reports/
+Disallow: /TESTING.md
+Disallow: /package.json
+Disallow: /vercel.json
+
+# Allow assets
+Allow: /assets/
+
+# Crawl delay (optional)
+Crawl-delay: 1

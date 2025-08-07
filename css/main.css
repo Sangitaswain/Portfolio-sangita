@@ -3,26 +3,26 @@
 
 /* ===== CSS CUSTOM PROPERTIES (DESIGN SYSTEM) ===== */
 :root {
-  /* Primary Colors - Deep Space Theme */
-  --color-space-black: #0a0a0a;
-  --color-space-dark: #1a1a2e;
-  --color-space-medium: #16213e;
-  --color-space-light: #2d3748;
+  /* Primary Colors - Modern Dark Theme */
+  --color-space-black: #0f0f0f;
+  --color-space-dark: #1a1a1a;
+  --color-space-medium: #2a2a2a;
+  --color-space-light: #3a3a3a;
   
-  /* Secondary Colors - Cosmic Accents */
-  --color-neon-purple: #8b5cf6;
-  --color-neon-purple-light: #a855f7;
-  --color-neon-purple-dark: #7c3aed;
+  /* Secondary Colors - Subtle Accents */
+  --color-accent-blue: #4a9eff;
+  --color-accent-blue-light: #6bb3ff;
+  --color-accent-blue-dark: #2d7bdb;
   
-  /* Accent Colors - Glowing Effects */
-  --color-cosmic-pink: #ec4899;
-  --color-cosmic-pink-light: #f472b6;
-  --color-cosmic-pink-dark: #db2777;
+  /* Accent Colors - Professional Highlights */
+  --color-accent-teal: #14b8a6;
+  --color-accent-teal-light: #2dd4bf;
+  --color-accent-teal-dark: #0f766e;
   
   /* Interactive Colors */
-  --color-electric-blue: #3b82f6;
-  --color-cyan-glow: #06b6d4;
-  --color-success-green: #10b981;
+  --color-electric-blue: #4a9eff;
+  --color-cyan-glow: #14b8a6;
+  --color-success-green: #22c55e;
   --color-warning-orange: #f59e0b;
   --color-error-red: #ef4444;
   
@@ -81,13 +81,22 @@
   --radius-xl: 1.5rem;
   --radius-full: 9999px;
   
+  /* Z-Index Scale */
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal: 40;
+  --z-popover: 50;
+  --z-tooltip: 60;
+  
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
-  --shadow-glow-strong: 0 0 30px rgba(139, 92, 246, 0.5);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(74, 158, 255, 0.2);
+  --shadow-glow-strong: 0 0 30px rgba(74, 158, 255, 0.3);
   
   /* Z-Index Scale */
   --z-dropdown: 1000;
@@ -106,12 +115,12 @@
   --transition-bounce: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --transition-cosmic: 400ms cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Container Sizes */
-  --container-sm: 640px;
-  --container-md: 768px;
-  --container-lg: 1024px;
-  --container-xl: 1280px;
-  --container-2xl: 1536px;
+  /* Container Sizes - More Focused */
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1140px;
+  --container-2xl: 1320px;
 }
 
 /* ===== CSS RESET AND NORMALIZE ===== */
@@ -178,9 +187,9 @@ a:focus {
 /* ===== LAYOUT UTILITIES ===== */
 .container {
   width: 100%;
-  max-width: var(--container-xl);
+  max-width: var(--container-lg);
   margin: 0 auto;
-  padding: 0 var(--space-4);
+  padding: 0 var(--space-6);
 }
 
 .section {
@@ -191,7 +200,7 @@ a:focus {
 .section-title {
   text-align: center;
   margin-bottom: var(--space-16);
-  background: linear-gradient(135deg, var(--color-neon-purple), var(--color-cosmic-pink));
+  background: linear-gradient(135deg, var(--color-accent-blue), var(--color-accent-teal));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -249,7 +258,7 @@ a:focus {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: var(--color-neon-purple);
+  background: var(--color-accent-blue);
   color: var(--color-text-primary);
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-md);
@@ -284,7 +293,7 @@ a:focus {
 
 /* ===== FOCUS STYLES FOR ACCESSIBILITY ===== */
 *:focus {
-  outline: 2px solid var(--color-electric-blue);
+  outline: 2px solid var(--color-accent-blue);
   outline-offset: 2px;
 }
 
@@ -292,17 +301,17 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid var(--color-neon-purple);
+  outline: 2px solid var(--color-accent-blue);
   outline-offset: 2px;
 }
 
 /* ===== SELECTION STYLES ===== */
 ::selection {
-  background-color: var(--color-neon-purple);
+  background-color: var(--color-accent-blue);
   color: var(--color-text-primary);
 }
 
 ::-moz-selection {
-  background-color: var(--color-neon-purple);
+  background-color: var(--color-accent-blue);
   color: var(--color-text-primary);
 }

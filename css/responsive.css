@@ -266,4 +266,373 @@
   .text-left-desktop {
     text-align: left;
   }
+}/*
+ ===== PERFORMANCE-OPTIMIZED RESPONSIVE STYLES ===== */
+
+/* Low-end device optimizations */
+body[data-animation-level="none"] {
+  /* Disable all animations for maximum performance */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .vanta-canvas {
+    display: none !important;
+  }
+  
+  .fallback-bg {
+    display: block !important;
+  }
+}
+
+body[data-animation-level="minimal"] {
+  /* Minimal animations for low-end devices */
+  .cosmic-particle,
+  .floating-particle,
+  .saturn-particle {
+    display: none !important;
+  }
+  
+  .complex-animation {
+    animation: none !important;
+  }
+  
+  .vanta-canvas {
+    opacity: 0.3 !important;
+  }
+}
+
+body[data-animation-level="moderate"] {
+  /* Moderate animations for mobile devices */
+  .cosmic-particle {
+    animation-duration: 30s !important;
+  }
+  
+  .floating-particle {
+    animation-duration: 25s !important;
+  }
+  
+  .complex-animation {
+    animation-duration: 1s !important;
+  }
+}
+
+/* Slow connection optimizations */
+body.slow-connection {
+  /* Reduce visual complexity for slow connections */
+  .non-essential-animation {
+    animation-play-state: paused !important;
+  }
+  
+  .background-particles {
+    display: none !important;
+  }
+  
+  .gradient-border {
+    background: solid var(--color-accent-blue) !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  /* Respect user's motion preferences */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .vanta-canvas {
+    display: none !important;
+  }
+  
+  .fallback-bg {
+    display: block !important;
+  }
+  
+  /* Keep essential micro-interactions */
+  button:hover,
+  .btn-primary:hover,
+  .social-link:hover {
+    transition: background-color 0.2s ease !important;
+  }
+}
+
+/* High contrast mode optimizations */
+@media (prefers-contrast: high) {
+  /* Enhance contrast for better accessibility */
+  .project-card,
+  .contact-form,
+  .easter-egg-content {
+    border: 3px solid var(--color-accent-blue) !important;
+    background: rgba(0, 0, 0, 0.95) !important;
+  }
+  
+  .form-input,
+  .tic-tac-toe-cell {
+    border: 2px solid var(--color-accent-blue) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
+  
+  .social-link,
+  .mode-btn,
+  .btn-secondary {
+    border: 2px solid var(--color-accent-blue) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+/* Data saver mode optimizations */
+body.data-saver {
+  /* Reduce data usage */
+  .vanta-canvas {
+    display: none !important;
+  }
+  
+  .cosmic-particle,
+  .floating-particle {
+    display: none !important;
+  }
+  
+  .background-image {
+    display: none !important;
+  }
+}
+
+/* Lazy loading styles */
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.lazy-loaded {
+  opacity: 1;
+}
+
+/* Loading placeholder for images */
+img.lazy::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Critical CSS for above-the-fold content */
+.critical-content {
+  /* Ensure critical content loads first */
+  contain: layout style paint;
+}
+
+/* Non-critical content that can be deferred */
+.non-critical-content {
+  /* Content that can load later */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Performance-optimized mobile styles */
+@media (max-width: 767px) {
+  /* Reduce complexity on mobile */
+  .complex-background {
+    background: solid var(--color-space-dark) !important;
+  }
+  
+  .multiple-shadows {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .gradient-text {
+    color: var(--color-accent-blue) !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+  }
+  
+  /* Optimize touch targets */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    padding: var(--space-3);
+  }
+  
+  /* Reduce animation complexity on mobile */
+  .mobile-simple-animation {
+    animation: simple-fade 0.3s ease !important;
+  }
+}
+
+@keyframes simple-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Battery level optimizations (experimental) */
+@media (max-width: 767px) {
+  /* Further reduce animations on mobile when battery might be low */
+  body.low-battery {
+    .cosmic-particle,
+    .floating-particle,
+    .background-animation {
+      display: none !important;
+    }
+    
+    .vanta-canvas {
+      display: none !important;
+    }
+    
+    .fallback-bg {
+      display: block !important;
+    }
+  }
+}
+
+/* Network-aware optimizations */
+body.slow-network {
+  /* Optimize for slow networks */
+  .high-quality-image {
+    display: none !important;
+  }
+  
+  .low-quality-image {
+    display: block !important;
+  }
+  
+  .video-background {
+    display: none !important;
+  }
+  
+  .static-background {
+    display: block !important;
+  }
+}
+
+/* Memory-constrained device optimizations */
+body.low-memory {
+  /* Reduce memory usage */
+  .memory-intensive-animation {
+    display: none !important;
+  }
+  
+  .large-particle-system {
+    display: none !important;
+  }
+  
+  .complex-filter {
+    filter: none !important;
+  }
+}
+
+/* Fallback styles for older browsers */
+.no-intersectionobserver img[data-src] {
+  /* Fallback for browsers without IntersectionObserver */
+  opacity: 1;
+}
+
+.no-webgl .vanta-canvas {
+  display: none !important;
+}
+
+.no-webgl .fallback-bg {
+  display: block !important;
+}
+
+.no-css3dtransforms .transform-3d {
+  transform: none !important;
+}
+
+.no-cssgrid .grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.no-cssgrid .grid > * {
+  flex: 1 1 300px !important;
+}
+
+.no-customproperties {
+  /* Fallback colors for browsers without CSS custom properties */
+  color: #ffffff;
+  background-color: #0f0f0f;
+}
+
+/* Progressive enhancement styles */
+.js-enabled .no-js-fallback {
+  display: none !important;
+}
+
+.no-js .js-only {
+  display: none !important;
+}
+
+.no-js .no-js-fallback {
+  display: block !important;
+}
+
+/* Responsive images optimization */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* WebP support optimization */
+.webp .jpg-fallback {
+  display: none !important;
+}
+
+.no-webp .webp-image {
+  display: none !important;
+}
+
+/* Container query polyfill support */
+@supports (container-type: inline-size) {
+  .container-query-supported {
+    container-type: inline-size;
+  }
+}
+
+/* Future-proofing for new CSS features */
+@supports (aspect-ratio: 16/9) {
+  .aspect-ratio-supported {
+    aspect-ratio: 16/9;
+  }
+}
+
+@supports (gap: 1rem) {
+  .gap-supported {
+    gap: 1rem;
+  }
+}
+
+/* Performance monitoring styles */
+.performance-debug {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  font-family: monospace;
+  z-index: 9999;
+  border-radius: 4px;
+  display: none;
+}
+
+body.debug-performance .performance-debug {
+  display: block;
 }

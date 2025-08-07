@@ -52,9 +52,22 @@ function initializeModules() {
     window.ProjectsModule.init();
   }
   
-  // Initialize skills module
-  if (window.SkillsModule) {
-    window.SkillsModule.init();
+  // Initialize skills module (legacy - disabled in favor of timeline)
+  // if (window.SkillsModule) {
+  //   window.SkillsModule.init();
+  // }
+  
+  // Initialize developer journey module
+  if (window.DeveloperJourneyModule) {
+    console.log('🔄 Initializing Developer Journey Module from main.js');
+    window.DeveloperJourneyModule.init();
+  } else {
+    console.warn('⚠️ DeveloperJourneyModule not found');
+  }
+  
+  // Initialize resume module
+  if (window.ResumeModule) {
+    window.ResumeModule.init();
   }
   
   // Initialize contact module
@@ -70,6 +83,21 @@ function initializeModules() {
   // Initialize easter egg module
   if (window.EasterEggModule) {
     window.EasterEggModule.init();
+  }
+  
+  // Initialize performance module
+  if (window.PerformanceModule) {
+    window.PerformanceModule.init();
+  }
+  
+  // Initialize accessibility module
+  if (window.AccessibilityModule) {
+    window.AccessibilityModule.init();
+  }
+  
+  // Initialize deployment module
+  if (window.DeploymentModule) {
+    window.DeploymentModule.init();
   }
 }
 

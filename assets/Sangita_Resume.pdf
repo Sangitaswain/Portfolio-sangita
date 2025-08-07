@@ -1,0 +1,133 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 1000
+>>
+stream
+BT
+/F1 24 Tf
+50 750 Td
+(SANGITA) Tj
+0 -30 Td
+/F1 14 Tf
+(Full Stack Developer & Data Engineer) Tj
+0 -40 Td
+/F1 12 Tf
+(Email: sangita@example.com | Phone: +1 (555) 123-4567) Tj
+0 -20 Td
+(Location: San Francisco, CA | Website: sangitas-codeverse.vercel.app) Tj
+0 -40 Td
+/F1 16 Tf
+(PROFESSIONAL SUMMARY) Tj
+0 -25 Td
+/F1 11 Tf
+(Passionate full-stack developer with expertise in data engineering, machine learning,) Tj
+0 -15 Td
+(and modern web technologies. Experienced in building scalable applications and) Tj
+0 -15 Td
+(data pipelines with a focus on user experience and performance optimization.) Tj
+0 -30 Td
+/F1 16 Tf
+(TECHNICAL SKILLS) Tj
+0 -25 Td
+/F1 11 Tf
+(Languages: JavaScript, Python, TypeScript, SQL, Java, R) Tj
+0 -15 Td
+(Frameworks: React, Node.js, Django, FastAPI, Express, TensorFlow) Tj
+0 -15 Td
+(Tools: AWS, Docker, Git, PostgreSQL, MongoDB, Figma) Tj
+0 -30 Td
+/F1 16 Tf
+(EXPERIENCE) Tj
+0 -25 Td
+/F1 12 Tf
+(Senior Full Stack Developer | TechCorp Solutions | 2022 - Present) Tj
+0 -20 Td
+/F1 11 Tf
+(• Led development of microservices architecture serving 100K+ daily users) Tj
+0 -15 Td
+(• Implemented real-time data processing pipeline reducing latency by 40%) Tj
+0 -15 Td
+(• Mentored junior developers and established coding best practices) Tj
+0 -25 Td
+/F1 12 Tf
+(Data Engineer | DataFlow Inc | 2020 - 2022) Tj
+0 -20 Td
+/F1 11 Tf
+(• Built ETL pipelines processing 10TB+ data daily using Python and Apache Spark) Tj
+0 -15 Td
+(• Designed and implemented data warehouse architecture on AWS) Tj
+0 -15 Td
+(• Optimized database queries resulting in 60% performance improvement) Tj
+0 -30 Td
+/F1 16 Tf
+(EDUCATION) Tj
+0 -25 Td
+/F1 12 Tf
+(Master of Science in Computer Science | Stanford University | 2018 - 2020) Tj
+0 -20 Td
+/F1 11 Tf
+(GPA: 3.8/4.0) Tj
+0 -20 Td
+/F1 12 Tf
+(Bachelor of Science in Software Engineering | UC Berkeley | 2014 - 2018) Tj
+0 -20 Td
+/F1 11 Tf
+(GPA: 3.7/4.0) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000001326 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1404
+%%EOF

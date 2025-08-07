@@ -25,16 +25,37 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     
-    <!-- Google Fonts -->
+    <!-- Resource Hints for Performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Critical CSS Inline for Performance -->
+    <style>
+        /* Critical above-the-fold styles */
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth}body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1rem;font-weight:400;line-height:1.6;color:#fff;background-color:#0f0f0f;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}.container{width:100%;max-width:960px;margin:0 auto;padding:0 1.5rem}.landing-section{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#2a2a2a 0%,#0f0f0f 70%)}.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;padding:2rem}.hero-title{font-family:'Orbitron',monospace;font-size:clamp(2.25rem,1.9rem + 1.75vw,3rem);font-weight:700;margin-bottom:1.5rem;background:linear-gradient(135deg,#4a9eff,#14b8a6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero-tagline{font-size:clamp(1.125rem,1rem + 0.625vw,1.25rem);color:#f8fafc;margin-bottom:3rem;min-height:2em}.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,#4a9eff,#14b8a6);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;border:none;font-family:inherit;font-size:.875rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;box-shadow:0 4px 6px -1px rgba(0,0,0,.2);text-decoration:none}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(74,158,255,.3)}.planet-navigation{margin-top:3rem}.planet-list{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;list-style:none}.planet-link{display:flex;flex-direction:column;align-items:center;gap:.75rem;text-decoration:none;color:#cbd5e1;transition:all .4s cubic-bezier(.4,0,.2,1);padding:1rem;border-radius:1rem}.planet{width:60px;height:60px;border-radius:50%;position:relative;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:0 0 15px rgba(74,158,255,.2)}.about-planet{background:radial-gradient(circle at 30% 30%,#14b8a6,#0f766e)}.projects-planet{background:radial-gradient(circle at 30% 30%,#4a9eff,#2d7bdb)}.skills-planet{background:radial-gradient(circle at 30% 30%,#4a9eff,#2d7bdb)}.resume-planet{background:radial-gradient(circle at 30% 30%,#f59e0b,#d97706)}.contact-planet{background:radial-gradient(circle at 30% 30%,#22c55e,#059669)}.planet-label{font-family:'Orbitron',monospace;font-size:.875rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em;opacity:.8;transition:opacity .15s ease}.planet-link:hover{color:#fff;transform:translateY(-5px)}.planet-link:hover .planet{transform:scale(1.1);box-shadow:0 0 25px rgba(74,158,255,.4)}.planet-link:hover .planet-label{opacity:1}.fallback-bg{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at center,#2a2a2a 0%,#0f0f0f 70%);display:none;z-index:1}*:focus{outline:2px solid #4a9eff;outline-offset:2px}@media (max-width:767px){.container{padding:0 .75rem}.hero-content{padding:1rem}.planet-list{gap:1rem}.planet{width:50px;height:50px}.planet-label{font-size:.75rem}.btn-primary{min-height:44px;min-width:44px}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.fallback-bg{display:block!important}}
+    </style>
+    
+    <!-- Google Fonts with Performance Optimization -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
+    
+    <!-- Stylesheets with Performance Optimization -->
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/developer-journey.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/developer-journey.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </noscript>
 </head>
 <body>
     <!-- Skip Navigation Link for Accessibility -->
@@ -178,32 +199,10 @@
         <!-- Skills Section -->
         <section id="skills" class="skills-section" aria-labelledby="skills-heading">
             <div class="container">
-                <h2 id="skills-heading" class="section-title">Skills Constellation</h2>
+                <h2 id="skills-heading" class="section-title">Developer Journey</h2>
                 
                 <div class="skills-container">
-                    <svg id="skills-constellation" class="constellation-svg" viewBox="0 0 800 600" role="img" aria-labelledby="constellation-desc">
-                        <title id="constellation-desc">Interactive skills constellation showing technical abilities</title>
-                        <!-- Skills constellation will be dynamically generated here -->
-                    </svg>
-                    
-                    <div class="skills-legend" aria-label="Skills categories">
-                        <div class="legend-item">
-                            <span class="legend-color languages" aria-hidden="true"></span>
-                            <span class="legend-text">Languages</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color frameworks" aria-hidden="true"></span>
-                            <span class="legend-text">Frameworks</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color tools" aria-hidden="true"></span>
-                            <span class="legend-text">Tools</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color soft-skills" aria-hidden="true"></span>
-                            <span class="legend-text">Soft Skills</span>
-                        </div>
-                    </div>
+                    <!-- Professional timeline will be dynamically generated here -->
                 </div>
             </div>
         </section>
@@ -357,8 +356,14 @@
     <!-- Application Scripts -->
     <script src="js/vanta-config.js"></script>
     <script src="js/projects.js"></script>
-    <script src="js/skills.js"></script>
+    <!-- <script src="js/skills.js"></script> -->
+    <script src="js/developer-journey.js"></script>
+    <script src="js/resume.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/performance.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/accessibility-tests.js"></script>
+    <script src="js/deployment.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/easter-egg.js"></script>
     <script src="js/main.js"></script>

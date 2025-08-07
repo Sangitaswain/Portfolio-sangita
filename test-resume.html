@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Portal Test - Sangita's Codeverse</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <main>
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section" aria-labelledby="resume-heading">
+            <div class="container">
+                <h2 id="resume-heading" class="section-title">Saturn Ring Resume Portal</h2>
+                
+                <div class="resume-content">
+                    <div class="saturn-ring saturn-ring-hover" aria-hidden="true">
+                        <div class="ring-outer"></div>
+                        <div class="ring-inner"></div>
+                        <div class="planet-core"></div>
+                    </div>
+                    
+                    <div class="resume-actions">
+                        <button id="download-resume" class="btn-primary download-btn download-btn-hover" aria-describedby="download-desc">
+                            <span class="btn-text">Download Resume</span>
+                            <span class="btn-icon" aria-hidden="true">📄</span>
+                        </button>
+                        <p id="download-desc" class="download-description">
+                            Download Sangita's resume as a PDF file
+                        </p>
+                    </div>
+                    
+                    <!-- Resume Preview -->
+                    <div id="resume-preview" class="resume-preview" aria-hidden="true">
+                        <!-- PDF preview will be loaded here if implemented -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Application Scripts -->
+    <script src="js/resume.js"></script>
+    <script>
+        // Initialize resume module when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.ResumeModule) {
+                window.ResumeModule.init();
+            }
+        });
+    </script>
+</body>
+</html>
