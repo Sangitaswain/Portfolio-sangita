@@ -53,9 +53,9 @@ function initializeModules() {
   }
   
   // Initialize skills module (legacy - disabled in favor of timeline)
-  // if (window.SkillsModule) {
-  //   window.SkillsModule.init();
-  // }
+  if (window.SkillsModule) {
+    window.SkillsModule.init();
+  }
   
   // Initialize developer journey module
   if (window.DeveloperJourneyModule) {
