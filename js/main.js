@@ -64,7 +64,6 @@ function initializeModules() {
   // if (window.SkillsModule) {
   //   window.SkillsModule.init();
   // }
-
   // Initialize developer journey module
   if (window.DeveloperJourneyModule) {
     console.log('🔄 Initializing Developer Journey Module from main.js');

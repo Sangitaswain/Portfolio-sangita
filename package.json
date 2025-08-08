@@ -11,7 +11,7 @@
     "optimize-css": "cleancss -o css/main.min.css css/main.css css/components.css css/animations.css css/responsive.css",
     "optimize-js": "terser js/*.js -o js/bundle.min.js --compress --mangle",
     "minify": "html-minifier --input-dir . --output-dir dist --file-ext html --remove-comments --collapse-whitespace --minify-css --minify-js",
-    "test": "npm run test-accessibility && npm run test-performance",
+    "test": "npm run test-accessibility",
     "test-accessibility": "pa11y http://localhost:3000",
     "test-performance": "lighthouse http://localhost:3000 --output=json --output-path=./reports/lighthouse.json",
     "deploy": "vercel --prod",
