@@ -1291,8 +1291,8 @@
 
 /* Resume section visibility */
 .resume-section {
-  opacity: 0;
-  transform: translateY(50px);
+  opacity: 1; /* Changed from 0 to 1 to make it visible by default */
+  transform: translateY(0); /* Changed from 50px to 0 to remove initial offset */
   transition: all 1s ease-out;
 }
 
@@ -2556,8 +2556,8 @@ OFILE IMAGE PLACEHOLDER ===== */
 
 /* Contact Section States */
 .contact-section {
-  opacity: 0;
-  transform: translateY(50px);
+  opacity: 1; /* Changed from 0 to 1 to make it visible by default */
+  transform: translateY(0); /* Changed from 50px to 0 to remove initial offset */
   transition: all 1s ease-out;
 }
 
@@ -2791,8 +2791,8 @@ OFILE IMAGE PLACEHOLDER ===== */
   .cosmic-particle {
     display: none;
   }
-}/
-* ===== EASTER EGG - COSMIC HERB TIC TAC TOE GAME ===== */
+}
+/* ===== EASTER EGG - COSMIC HERB TIC TAC TOE GAME ===== */
 .easter-egg-container {
   position: fixed;
   top: 0;

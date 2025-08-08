@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Projects Test</title>
+    
+    <style>
+        body {
+            background: #0a0a0f;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+        }
+        
+        .projects-section {
+            background: rgba(26, 26, 46, 0.5);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            min-height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+        }
+        
+        .project-card {
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            border-radius: 8px;
+            padding: 1rem;
+            color: white;
+        }
+        
+        .project-filters {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .filter-btn {
+            background: rgba(139, 92, 246, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .filter-btn.active {
+            background: rgba(139, 92, 246, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Minimal Projects Test</h1>
+    <p>Testing if projects render without cosmic foundation interference.</p>
+    
+    <section class="projects-section">
+        <h2>Projects</h2>
+        
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+            <button class="filter-btn" data-filter="ml">ML</button>
+        </div>
+        
+        <div id="projects-grid" class="projects-grid">
+            <div class="project-card">
+                <h3>Test Project 1</h3>
+                <p>This is a test project to see if the grid works.</p>
+            </div>
+            <div class="project-card">
+                <h3>Test Project 2</h3>
+                <p>Another test project for the grid layout.</p>
+            </div>
+        </div>
+    </section>
+    
+    <script src="js/projects.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🔍 Testing projects module...');
+            
+            if (window.ProjectsModule) {
+                console.log('✅ ProjectsModule found');
+                console.log('📊 Projects data:', window.ProjectsModule.data?.length || 'No data');
+                
+                // Clear test content and initialize
+                const grid = document.getElementById('projects-grid');
+                if (grid) {
+                    grid.innerHTML = ''; // Clear test content
+                    console.log('🧹 Cleared test content');
+                    
+                    try {
+                        window.ProjectsModule.init();
+                        console.log('✅ ProjectsModule initialized');
+                        
+                        setTimeout(() => {
+                            const cards = document.querySelectorAll('.project-card');
+                            console.log(`📋 Found ${cards.length} project cards after init`);
+                            
+                            if (cards.length === 0) {
+                                console.log('❌ No cards rendered, checking grid content...');
+                                console.log('Grid innerHTML:', grid.innerHTML);
+                            }
+                        }, 500);
+                        
+                    } catch (error) {
+                        console.error('❌ Error initializing projects:', error);
+                    }
+                } else {
+                    console.error('❌ Projects grid not found');
+                }
+            } else {
+                console.error('❌ ProjectsModule not found');
+            }
+        });
+    </script>
+</body>
+</html>

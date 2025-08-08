@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume & Contact Visibility Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #0f0f0f; color: white; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #333; }
+        .visible { color: #22c55e; }
+        .hidden { color: #ef4444; }
+    </style>
+</head>
+<body>
+    <h1>Resume & Contact Sections Visibility Test</h1>
+    
+    <div class="test-section">
+        <h2>Section Visibility Status</h2>
+        <p>Resume Section: <span id="resume-status">Checking...</span></p>
+        <p>Contact Section: <span id="contact-status">Checking...</span></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>JavaScript Module Status</h2>
+        <p>ResumeModule: <span id="resume-module-status">Checking...</span></p>
+        <p>ContactModule: <span id="contact-module-status">Checking...</span></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Actions</h2>
+        <button onclick="forceShowSections()">Force Show Sections</button>
+        <button onclick="testModules()">Test Module Initialization</button>
+    </div>
+
+    <script>
+        // Check if sections exist and their visibility
+        function checkSectionVisibility() {
+            const resumeSection = document.querySelector('#resume');
+            const contactSection = document.querySelector('#contact');
+            
+            const resumeStatus = document.getElementById('resume-status');
+            const contactStatus = document.getElementById('contact-status');
+            
+            if (resumeSection) {
+                const computedStyle = window.getComputedStyle(resumeSection);
+                const isVisible = computedStyle.opacity !== '0' && computedStyle.display !== 'none';
+                resumeStatus.textContent = isVisible ? 'Visible' : 'Hidden (opacity: ' + computedStyle.opacity + ')';
+                resumeStatus.className = isVisible ? 'visible' : 'hidden';
+            } else {
+                resumeStatus.textContent = 'Not Found';
+                resumeStatus.className = 'hidden';
+            }
+            
+            if (contactSection) {
+                const computedStyle = window.getComputedStyle(contactSection);
+                const isVisible = computedStyle.opacity !== '0' && computedStyle.display !== 'none';
+                contactStatus.textContent = isVisible ? 'Visible' : 'Hidden (opacity: ' + computedStyle.opacity + ')';
+                contactStatus.className = isVisible ? 'visible' : 'hidden';
+            } else {
+                contactStatus.textContent = 'Not Found';
+                contactStatus.className = 'hidden';
+            }
+        }
+        
+        // Check module availability
+        function checkModules() {
+            const resumeModuleStatus = document.getElementById('resume-module-status');
+            const contactModuleStatus = document.getElementById('contact-module-status');
+            
+            resumeModuleStatus.textContent = window.ResumeModule ? 'Available' : 'Not Available';
+            resumeModuleStatus.className = window.ResumeModule ? 'visible' : 'hidden';
+            
+            contactModuleStatus.textContent = window.ContactModule ? 'Available' : 'Not Available';
+            contactModuleStatus.className = window.ContactModule ? 'visible' : 'hidden';
+        }
+        
+        // Force show sections by adding visibility classes
+        function forceShowSections() {
+            const resumeSection = document.querySelector('#resume');
+            const contactSection = document.querySelector('#contact');
+            
+            if (resumeSection) {
+                resumeSection.classList.add('resume-visible');
+                resumeSection.style.opacity = '1';
+                resumeSection.style.transform = 'translateY(0)';
+            }
+            
+            if (contactSection) {
+                contactSection.classList.add('contact-visible');
+                contactSection.style.opacity = '1';
+                contactSection.style.transform = 'translateY(0)';
+            }
+            
+            setTimeout(checkSectionVisibility, 100);
+        }
+        
+        // Test module initialization
+        function testModules() {
+            if (window.ResumeModule && window.ResumeModule.init) {
+                try {
+                    window.ResumeModule.init();
+                    console.log('ResumeModule initialized successfully');
+                } catch (error) {
+                    console.error('ResumeModule initialization failed:', error);
+                }
+            }
+            
+            if (window.ContactModule && window.ContactModule.init) {
+                try {
+                    window.ContactModule.init();
+                    console.log('ContactModule initialized successfully');
+                } catch (error) {
+                    console.error('ContactModule initialization failed:', error);
+                }
+            }
+            
+            setTimeout(() => {
+                checkModules();
+                checkSectionVisibility();
+            }, 500);
+        }
+        
+        // Run checks when page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                checkSectionVisibility();
+                checkModules();
+            }, 1000);
+        });
+    </script>
+    
+    <!-- Load the same scripts as the main page -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <script src="js/resume.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

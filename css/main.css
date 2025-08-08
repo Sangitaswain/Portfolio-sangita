@@ -145,10 +145,13 @@ body {
   font-weight: var(--font-normal);
   line-height: 1.6;
   color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
+  background: transparent; /* Let cosmic foundation handle background */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  cursor: none; /* Hide default cursor for cosmic cursor */
 }
 
 /* ===== TYPOGRAPHY SYSTEM ===== */
@@ -195,15 +198,41 @@ a:focus {
 .section {
   padding: var(--space-20) 0;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Special handling for content-heavy sections */
+.projects-section,
+.skills-section {
+  justify-content: flex-start;
+  padding-top: var(--space-16);
 }
 
 .section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
   text-align: center;
   margin-bottom: var(--space-16);
   background: linear-gradient(135deg, var(--color-accent-blue), var(--color-accent-teal));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: 0.025em;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===== GRID SYSTEM ===== */

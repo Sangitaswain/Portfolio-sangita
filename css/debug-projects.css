@@ -1,0 +1,37 @@
+/* Debug styles for projects section */
+
+.projects-section {
+  background: rgba(255, 0, 0, 0.1) !important; /* Red tint for debugging */
+  border: 2px solid red !important;
+  min-height: 100vh !important;
+}
+
+.projects-grid {
+  background: rgba(0, 255, 0, 0.1) !important; /* Green tint for debugging */
+  border: 2px solid green !important;
+  min-height: 300px !important;
+  padding: 2rem !important;
+}
+
+.project-card {
+  background: rgba(0, 0, 255, 0.3) !important; /* Blue tint for debugging */
+  border: 2px solid blue !important;
+  color: white !important;
+  padding: 1rem !important;
+  margin: 1rem !important;
+}
+
+.project-filters {
+  background: rgba(255, 255, 0, 0.1) !important; /* Yellow tint for debugging */
+  border: 2px solid yellow !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+}
+
+.filter-btn {
+  background: rgba(255, 0, 255, 0.3) !important; /* Magenta for debugging */
+  border: 1px solid magenta !important;
+  color: white !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0.25rem !important;
+}

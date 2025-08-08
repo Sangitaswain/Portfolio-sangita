@@ -114,6 +114,7 @@ sangitas-codeverse/
 - **Accent:** Sophisticated Teal (#14b8a6, #2dd4bf, #0f766e)
 - **Text:** Clean White (#f8fafc), Subtle Gray (#cbd5e1)
 - **Interactive:** Professional Electric Blue (#3b82f6), Elegant Cyan (#06b6d4)
+- **Star Effects:** Enhanced Cyan (rgba(6, 182, 212, 0.5)) for improved cosmic atmosphere
 
 ### Typography System:
 - **Headings:** Orbitron (Google Fonts) - Futuristic, space-themed

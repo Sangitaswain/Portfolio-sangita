@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Debug Test</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cosmic-foundation.css">
+    
+    <style>
+        body {
+            background: #0a0a0f;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            padding: 2rem;
+        }
+        
+        .debug-info {
+            background: rgba(26, 26, 46, 0.5);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <h1>🔍 Projects Debug Test</h1>
+        <p>This page tests if the projects module is working correctly.</p>
+        <div id="debug-output"></div>
+    </div>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="ml">ML</button>
+                <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="projects-grid">
+                <!-- Projects will be loaded here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Scripts -->
+    <script src="js/projects.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const debugOutput = document.getElementById('debug-output');
+            
+            // Check if projects module loaded
+            if (window.ProjectsModule) {
+                debugOutput.innerHTML += '<p>✅ ProjectsModule loaded successfully</p>';
+                
+                // Check if data exists
+                if (window.ProjectsModule.data) {
+                    debugOutput.innerHTML += `<p>✅ Projects data loaded: ${window.ProjectsModule.data.length} projects</p>`;
+                } else {
+                    debugOutput.innerHTML += '<p>❌ Projects data not found</p>';
+                }
+                
+                // Try to initialize
+                try {
+                    window.ProjectsModule.init();
+                    debugOutput.innerHTML += '<p>✅ ProjectsModule initialized</p>';
+                    
+                    // Check if projects were rendered
+                    setTimeout(() => {
+                        const projectCards = document.querySelectorAll('.project-card');
+                        debugOutput.innerHTML += `<p>📊 Rendered project cards: ${projectCards.length}</p>`;
+                        
+                        if (projectCards.length === 0) {
+                            debugOutput.innerHTML += '<p>❌ No project cards were rendered</p>';
+                            
+                            // Check if grid exists
+                            const grid = document.getElementById('projects-grid');
+                            if (grid) {
+                                debugOutput.innerHTML += `<p>📋 Grid element exists, innerHTML length: ${grid.innerHTML.length}</p>`;
+                                debugOutput.innerHTML += `<p>📋 Grid content: ${grid.innerHTML.substring(0, 200)}...</p>`;
+                            } else {
+                                debugOutput.innerHTML += '<p>❌ Projects grid element not found</p>';
+                            }
+                        }
+                    }, 1000);
+                    
+                } catch (error) {
+                    debugOutput.innerHTML += `<p>❌ Error initializing: ${error.message}</p>`;
+                }
+                
+            } else {
+                debugOutput.innerHTML += '<p>❌ ProjectsModule not found</p>';
+            }
+        });
+    </script>
+</body>
+</html>

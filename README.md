@@ -107,6 +107,7 @@ sangitas-codeverse/
 - **Primary**: Modern Dark Theme (#0f0f0f), Space Dark (#1a1a1a)
 - **Secondary**: Professional Blue (#4a9eff), Sophisticated Teal (#14b8a6)
 - **Accent**: Electric Blue (#3b82f6), Cyan Glow (#06b6d4)
+- **Star Effects**: Enhanced Cyan (rgba(6, 182, 212, 0.5)) for improved cosmic atmosphere
 
 ### Typography
 - **Headings**: Orbitron (futuristic, space-themed)

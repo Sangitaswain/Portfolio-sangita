@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sangita's Codeverse - An immersive cosmic portfolio showcasing coding skills, projects, and personality through interactive space-themed design.">
-    <meta name="keywords" content="portfolio, developer, data engineering, machine learning, web development, cosmic design">
+    <meta name="description"
+        content="Sangita's Codeverse - An immersive cosmic portfolio showcasing coding skills, projects, and personality through interactive space-themed design.">
+    <meta name="keywords"
+        content="portfolio, developer, data engineering, machine learning, web development, cosmic design">
     <meta name="author" content="Sangita">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Sangita's Codeverse - Developer Portfolio">
-    <meta property="og:description" content="Explore the cosmic universe of a passionate developer specializing in data engineering, ML, and web development.">
+    <meta property="og:description"
+        content="Explore the cosmic universe of a passionate developer specializing in data engineering, ML, and web development.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sangitas-codeverse.vercel.app">
     <meta property="og:image" content="assets/images/og-preview.jpg">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sangita's Codeverse - Developer Portfolio">
-    <meta name="twitter:description" content="Explore the cosmic universe of a passionate developer specializing in data engineering, ML, and web development.">
+    <meta name="twitter:description"
+        content="Explore the cosmic universe of a passionate developer specializing in data engineering, ML, and web development.">
     <meta name="twitter:image" content="assets/images/og-preview.jpg">
-    
+
     <title>Sangita's Codeverse - Developer Portfolio</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    
+
     <!-- Resource Hints for Performance -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -32,40 +37,278 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <!-- Critical CSS Inline for Performance -->
     <style>
         /* Critical above-the-fold styles */
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth}body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1rem;font-weight:400;line-height:1.6;color:#fff;background-color:#0f0f0f;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}.container{width:100%;max-width:960px;margin:0 auto;padding:0 1.5rem}.landing-section{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#2a2a2a 0%,#0f0f0f 70%)}.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;padding:2rem}.hero-title{font-family:'Orbitron',monospace;font-size:clamp(2.25rem,1.9rem + 1.75vw,3rem);font-weight:700;margin-bottom:1.5rem;background:linear-gradient(135deg,#4a9eff,#14b8a6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero-tagline{font-size:clamp(1.125rem,1rem + 0.625vw,1.25rem);color:#f8fafc;margin-bottom:3rem;min-height:2em}.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,#4a9eff,#14b8a6);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;border:none;font-family:inherit;font-size:.875rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;box-shadow:0 4px 6px -1px rgba(0,0,0,.2);text-decoration:none}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(74,158,255,.3)}.planet-navigation{margin-top:3rem}.planet-list{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;list-style:none}.planet-link{display:flex;flex-direction:column;align-items:center;gap:.75rem;text-decoration:none;color:#cbd5e1;transition:all .4s cubic-bezier(.4,0,.2,1);padding:1rem;border-radius:1rem}.planet{width:60px;height:60px;border-radius:50%;position:relative;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:0 0 15px rgba(74,158,255,.2)}.about-planet{background:radial-gradient(circle at 30% 30%,#14b8a6,#0f766e)}.projects-planet{background:radial-gradient(circle at 30% 30%,#4a9eff,#2d7bdb)}.skills-planet{background:radial-gradient(circle at 30% 30%,#4a9eff,#2d7bdb)}.resume-planet{background:radial-gradient(circle at 30% 30%,#f59e0b,#d97706)}.contact-planet{background:radial-gradient(circle at 30% 30%,#22c55e,#059669)}.planet-label{font-family:'Orbitron',monospace;font-size:.875rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em;opacity:.8;transition:opacity .15s ease}.planet-link:hover{color:#fff;transform:translateY(-5px)}.planet-link:hover .planet{transform:scale(1.1);box-shadow:0 0 25px rgba(74,158,255,.4)}.planet-link:hover .planet-label{opacity:1}.fallback-bg{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at center,#2a2a2a 0%,#0f0f0f 70%);display:none;z-index:1}*:focus{outline:2px solid #4a9eff;outline-offset:2px}@media (max-width:767px){.container{padding:0 .75rem}.hero-content{padding:1rem}.planet-list{gap:1rem}.planet{width:50px;height:50px}.planet-label{font-size:.75rem}.btn-primary{min-height:44px;min-width:44px}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.fallback-bg{display:block!important}}
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #0f0f0f;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden
+        }
+
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1.5rem
+        }
+
+        .landing-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, #2a2a2a 0%, #0f0f0f 70%)
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #4a9eff, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+            color: #f8fafc;
+            margin-bottom: 3rem;
+            min-height: 2em
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            background: linear-gradient(135deg, #4a9eff, #14b8a6);
+            color: #fff;
+            padding: .75rem 1.5rem;
+            border-radius: .5rem;
+            border: none;
+            font-family: inherit;
+            font-size: .875rem;
+            font-weight: 600;
+            letter-spacing: .02em;
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .2);
+            text-decoration: none
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(74, 158, 255, .3)
+        }
+
+        .planet-navigation {
+            margin-top: 3rem
+        }
+
+        .planet-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none
+        }
+
+        .planet-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .75rem;
+            text-decoration: none;
+            color: #cbd5e1;
+            transition: all .4s cubic-bezier(.4, 0, .2, 1);
+            padding: 1rem;
+            border-radius: 1rem
+        }
+
+        .planet {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: relative;
+            transition: all .4s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0 0 15px rgba(74, 158, 255, .2)
+        }
+
+        .about-planet {
+            background: radial-gradient(circle at 30% 30%, #14b8a6, #0f766e)
+        }
+
+        .projects-planet {
+            background: radial-gradient(circle at 30% 30%, #4a9eff, #2d7bdb)
+        }
+
+        .skills-planet {
+            background: radial-gradient(circle at 30% 30%, #4a9eff, #2d7bdb)
+        }
+
+        .resume-planet {
+            background: radial-gradient(circle at 30% 30%, #f59e0b, #d97706)
+        }
+
+        .contact-planet {
+            background: radial-gradient(circle at 30% 30%, #22c55e, #059669)
+        }
+
+        .planet-label {
+            font-family: 'Orbitron', monospace;
+            font-size: .875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            opacity: .8;
+            transition: opacity .15s ease
+        }
+
+        .planet-link:hover {
+            color: #fff;
+            transform: translateY(-5px)
+        }
+
+        .planet-link:hover .planet {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(74, 158, 255, .4)
+        }
+
+        .planet-link:hover .planet-label {
+            opacity: 1
+        }
+
+        .fallback-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #2a2a2a 0%, #0f0f0f 70%);
+            display: none;
+            z-index: 1
+        }
+
+        *:focus {
+            outline: 2px solid #4a9eff;
+            outline-offset: 2px
+        }
+
+        @media (max-width:767px) {
+            .container {
+                padding: 0 .75rem
+            }
+
+            .hero-content {
+                padding: 1rem
+            }
+
+            .planet-list {
+                gap: 1rem
+            }
+
+            .planet {
+                width: 50px;
+                height: 50px
+            }
+
+            .planet-label {
+                font-size: .75rem
+            }
+
+            .btn-primary {
+                min-height: 44px;
+                min-width: 44px
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important
+            }
+
+            .fallback-bg {
+                display: block !important
+            }
+        }
     </style>
-    
+
     <!-- Google Fonts with Performance Optimization -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
-    
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+    </noscript>
+
     <!-- Stylesheets with Performance Optimization -->
     <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/components.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/cosmic-foundation.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/developer-journey.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/visibility-fix.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/cosmic-foundation.css">
         <link rel="stylesheet" href="css/developer-journey.css">
         <link rel="stylesheet" href="css/animations.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/visibility-fix.css">
     </noscript>
 </head>
+
 <body>
     <!-- Skip Navigation Link for Accessibility -->
     <a href="#main-content" class="skip-nav">Skip to main content</a>
-    
+
     <!-- Landing Section -->
     <section id="landing" class="landing-section" aria-labelledby="hero-heading">
         <div id="landing-bg" class="galaxy-background" aria-hidden="true"></div>
         <div class="fallback-bg" aria-hidden="true"></div>
-        
+
         <div class="hero-content">
             <h1 id="hero-heading" class="hero-title">
                 <span class="hero-name">Sangita</span>
@@ -73,7 +316,7 @@
             <p class="hero-tagline" id="typewriter-text" aria-live="polite">
                 Hi, I'm Sangita — Coder 💻 | Dreamer 🌙 | Data Explorer 🚀
             </p>
-            
+
             <!-- Planet Navigation -->
             <nav class="planet-navigation" aria-label="Main navigation">
                 <ul class="planet-list">
@@ -110,7 +353,7 @@
                 </ul>
             </nav>
         </div>
-        
+
         <!-- Scroll Indicator -->
         <div class="scroll-indicator" aria-hidden="true">
             <span class="scroll-text">Scroll to explore</span>
@@ -120,28 +363,28 @@
 
     <!-- Main Content -->
     <main id="main-content" role="main">
-        
+
         <!-- About Me Section -->
-        <section id="about" class="about-section" aria-labelledby="about-heading">
+        <section id="about" class="section about-section" aria-labelledby="about-heading">
             <div class="container">
                 <h2 id="about-heading" class="section-title">About Me</h2>
-                
+
                 <div class="about-content">
                     <div class="profile-container">
                         <div class="glowing-orb" aria-hidden="true">
                             <img src="assets/images/profile.jpg" alt="Sangita's profile picture" class="profile-image">
                         </div>
                     </div>
-                    
+
                     <div class="bio-content">
                         <div class="bio-section">
                             <h3 class="bio-title">Background</h3>
                             <p class="bio-text">
-                                Passionate developer with expertise in Data Engineering, Machine Learning, and Finance. 
+                                Passionate developer with expertise in Data Engineering, Machine Learning, and Finance.
                                 Currently exploring the intersection of technology and innovation.
                             </p>
                         </div>
-                        
+
                         <div class="bio-section">
                             <h3 class="bio-title">Interests & Hobbies</h3>
                             <ul class="interests-list">
@@ -151,7 +394,7 @@
                                 <li class="interest-item">Side Hustles</li>
                             </ul>
                         </div>
-                        
+
                         <div class="bio-section">
                             <h3 class="bio-title">Aspirations</h3>
                             <ul class="aspirations-list">
@@ -166,29 +409,34 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+        <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
             <div class="container">
                 <h2 id="projects-heading" class="section-title">Projects</h2>
-                
+
                 <!-- Project Filters -->
                 <div class="project-filters" role="tablist" aria-label="Project categories">
-                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="projects-grid">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true"
+                        aria-controls="projects-grid">
                         All Projects
                     </button>
-                    <button class="filter-btn" data-filter="frontend" role="tab" aria-selected="false" aria-controls="projects-grid">
+                    <button class="filter-btn" data-filter="frontend" role="tab" aria-selected="false"
+                        aria-controls="projects-grid">
                         Frontend
                     </button>
-                    <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false" aria-controls="projects-grid">
+                    <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false"
+                        aria-controls="projects-grid">
                         Backend
                     </button>
-                    <button class="filter-btn" data-filter="ml" role="tab" aria-selected="false" aria-controls="projects-grid">
+                    <button class="filter-btn" data-filter="ml" role="tab" aria-selected="false"
+                        aria-controls="projects-grid">
                         ML
                     </button>
-                    <button class="filter-btn" data-filter="hackathon" role="tab" aria-selected="false" aria-controls="projects-grid">
+                    <button class="filter-btn" data-filter="hackathon" role="tab" aria-selected="false"
+                        aria-controls="projects-grid">
                         Hackathon
                     </button>
                 </div>
-                
+
                 <!-- Projects Grid -->
                 <div id="projects-grid" class="projects-grid" role="tabpanel">
                     <!-- Projects will be dynamically loaded here -->
@@ -197,10 +445,10 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="skills-section" aria-labelledby="skills-heading">
+        <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
             <div class="container">
                 <h2 id="skills-heading" class="section-title">Developer Journey</h2>
-                
+
                 <div class="skills-container">
                     <!-- Professional timeline will be dynamically generated here -->
                 </div>
@@ -208,17 +456,17 @@
         </section>
 
         <!-- Resume Section -->
-        <section id="resume" class="resume-section" aria-labelledby="resume-heading">
+        <section id="resume" class="section resume-section" aria-labelledby="resume-heading">
             <div class="container">
                 <h2 id="resume-heading" class="section-title">Resume Portal</h2>
-                
+
                 <div class="resume-content">
                     <div class="saturn-ring" aria-hidden="true">
                         <div class="ring-outer"></div>
                         <div class="ring-inner"></div>
                         <div class="planet-core"></div>
                     </div>
-                    
+
                     <div class="resume-actions">
                         <button id="download-resume" class="btn-primary download-btn" aria-describedby="download-desc">
                             <span class="btn-text">Download Resume</span>
@@ -228,7 +476,7 @@
                             Download Sangita's resume as a PDF file
                         </p>
                     </div>
-                    
+
                     <!-- Optional PDF Preview -->
                     <div id="resume-preview" class="resume-preview" aria-hidden="true">
                         <!-- PDF preview will be loaded here if implemented -->
@@ -238,79 +486,61 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+        <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
             <div class="container">
                 <h2 id="contact-heading" class="section-title">Contact Portal</h2>
-                
+
                 <div class="contact-content">
                     <!-- Contact Form -->
                     <form id="contact-form" class="contact-form" novalidate>
                         <div class="form-group">
                             <label for="contact-name" class="form-label">Name</label>
-                            <input 
-                                type="text" 
-                                id="contact-name" 
-                                name="name" 
-                                class="form-input" 
-                                required 
-                                aria-describedby="name-error"
-                                placeholder="Your name"
-                            >
+                            <input type="text" id="contact-name" name="name" class="form-input" required
+                                aria-describedby="name-error" placeholder="Your name">
                             <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="contact-email" class="form-label">Email</label>
-                            <input 
-                                type="email" 
-                                id="contact-email" 
-                                name="email" 
-                                class="form-input" 
-                                required 
-                                aria-describedby="email-error"
-                                placeholder="your.email@example.com"
-                            >
+                            <input type="email" id="contact-email" name="email" class="form-input" required
+                                aria-describedby="email-error" placeholder="your.email@example.com">
                             <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="contact-message" class="form-label">Message</label>
-                            <textarea 
-                                id="contact-message" 
-                                name="message" 
-                                class="form-input form-textarea" 
-                                required 
-                                aria-describedby="message-error"
-                                placeholder="Your message..."
-                                rows="5"
-                            ></textarea>
+                            <textarea id="contact-message" name="message" class="form-input form-textarea" required
+                                aria-describedby="message-error" placeholder="Your message..." rows="5"></textarea>
                             <div id="message-error" class="error-message" role="alert" aria-live="polite"></div>
                         </div>
-                        
+
                         <button type="submit" class="btn-primary submit-btn">
                             <span class="btn-text">Send Message</span>
                             <span class="btn-icon" aria-hidden="true">🚀</span>
                         </button>
                     </form>
-                    
+
                     <!-- Social Links -->
                     <div class="social-links">
                         <h3 class="social-title">Connect with me</h3>
                         <ul class="social-list">
                             <li class="social-item">
-                                <a href="https://linkedin.com/in/sangita" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+                                <a href="https://linkedin.com/in/sangita" class="social-link" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Connect on LinkedIn">
                                     <span class="social-icon linkedin" aria-hidden="true"></span>
                                     <span class="social-text">LinkedIn</span>
                                 </a>
                             </li>
                             <li class="social-item">
-                                <a href="https://github.com/sangita" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">
+                                <a href="https://github.com/sangita" class="social-link" target="_blank"
+                                    rel="noopener noreferrer" aria-label="View GitHub profile">
                                     <span class="social-icon github" aria-hidden="true"></span>
                                     <span class="social-text">GitHub</span>
                                 </a>
                             </li>
                             <li class="social-item">
-                                <a href="https://instagram.com/sangita" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
+                                <a href="https://instagram.com/sangita" class="social-link" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Follow on Instagram">
                                     <span class="social-icon instagram" aria-hidden="true"></span>
                                     <span class="social-text">Instagram</span>
                                 </a>
@@ -324,7 +554,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Form Status Messages -->
                 <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
             </div>
@@ -354,6 +584,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Application Scripts -->
+    <script src="js/cosmic-foundation.js"></script>
     <script src="js/vanta-config.js"></script>
     <script src="js/projects.js"></script>
     <!-- <script src="js/skills.js"></script> -->
@@ -366,6 +597,8 @@
     <script src="js/deployment.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/easter-egg.js"></script>
+    <script src="js/visibility-fix.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

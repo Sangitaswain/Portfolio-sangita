@@ -1,0 +1,53 @@
+/* Visibility Fix for Resume and Contact Sections */
+/* This file ensures the resume and contact sections are always visible */
+
+/* Force resume section to be visible */
+.resume-section {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Force contact section to be visible */
+.contact-section {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Ensure resume content is visible */
+.resume-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure contact content is visible */
+.contact-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Make sure Saturn ring is visible */
+.saturn-ring {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Make sure contact form is visible */
+.contact-form {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Debug styles - remove these later */
+.resume-section {
+  border: 2px solid #4a9eff !important;
+  min-height: 400px !important;
+}
+
+.contact-section {
+  border: 2px solid #22c55e !important;
+  min-height: 400px !important;
+}

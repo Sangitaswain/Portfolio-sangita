@@ -89,8 +89,8 @@ function detectDeviceCapabilities() {
     lowEnd: performanceConfig.isLowEnd,
     slowConnection: performanceConfig.isSlowConnection
   });
-}//
- Detect user preferences
+}
+// Detect user preferences
 function detectUserPreferences() {
   // Reduced motion preference
   performanceConfig.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -267,8 +267,8 @@ function enableModerateAnimations() {
 function enableFullAnimations() {
   // Full animations are enabled by default
   console.log('🌟 Full animations enabled');
-}// Imple
-ment image optimization
+}
+// Implement image optimization
 function implementImageOptimization() {
   if (!performanceConfig.imageOptimizationEnabled) return;
   
@@ -478,8 +478,8 @@ function loadNonCriticalFeatures() {
 function loadSocialMediaWidgets() {
   // Placeholder for social media widget loading
   console.log('📱 Social media widgets loaded');
-}// Optimize 
-font loading
+}
+// Optimize font loading
 function optimizeFontLoading() {
   // Preload critical fonts
   const criticalFonts = [

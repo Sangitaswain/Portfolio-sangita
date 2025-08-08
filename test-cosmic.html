@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Foundation Test</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Cosmic Foundation Styles -->
+    <link rel="stylesheet" href="css/cosmic-foundation.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            cursor: none;
+        }
+        
+        .test-content {
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .test-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .test-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #4a9eff, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .test-card {
+            background: rgba(26, 26, 46, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 1rem;
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+        
+        .test-button {
+            background: linear-gradient(135deg, #4a9eff, #14b8a6);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1rem;
+        }
+        
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(74, 158, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-content">
+        <section class="test-section fade-in">
+            <h1 class="test-title">🌌 Cosmic Foundation Test</h1>
+            <p>Move your mouse around to see the cosmic effects!</p>
+            
+            <div class="test-card cosmic-card fade-in">
+                <h3>Glassmorphism Card</h3>
+                <p>This card has cosmic glassmorphism effects with subtle glow and backdrop blur.</p>
+                <button class="test-button">Cosmic Button</button>
+            </div>
+            
+            <div class="test-card cosmic-card fade-in stagger-item">
+                <h3>Interactive Elements</h3>
+                <p>Hover over this card to see the cosmic animations and particle effects.</p>
+                <button class="test-button">Another Button</button>
+            </div>
+        </section>
+        
+        <section class="test-section fade-in">
+            <h2 class="test-title">✨ Mouse Interactions</h2>
+            <p>The background has subtle twinkling stars and your mouse creates gentle particles.</p>
+            
+            <div class="test-card cosmic-card fade-in stagger-item">
+                <h3>Smooth Animations</h3>
+                <p>All animations are smooth, performance-optimized, and respect reduced motion preferences.</p>
+            </div>
+        </section>
+        
+        <section class="test-section fade-in">
+            <h2 class="test-title">🎨 Theme Toggle</h2>
+            <p>Look for the theme toggle button in the top-right corner to switch between cosmic themes!</p>
+            
+            <div class="test-card cosmic-card fade-in stagger-item">
+                <h3>Responsive Design</h3>
+                <p>The cosmic foundation works perfectly on all devices with optimized performance.</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Cosmic Foundation JavaScript -->
+    <script src="js/cosmic-foundation.js"></script>
+    
+    <script>
+        // Test script to demonstrate cosmic effects
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🌌 Cosmic Foundation Test Loaded');
+            
+            // Add click effects to buttons
+            document.querySelectorAll('.test-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    if (window.CosmicFoundation) {
+                        const rect = e.target.getBoundingClientRect();
+                        const x = rect.left + rect.width / 2;
+                        const y = rect.top + rect.height / 2;
+                        
+                        // Create burst of particles
+                        for (let i = 0; i < 5; i++) {
+                            setTimeout(() => {
+                                window.CosmicFoundation.createCustomParticle(
+                                    x + (Math.random() - 0.5) * 50,
+                                    y + (Math.random() - 0.5) * 50
+                                );
+                            }, i * 50);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
